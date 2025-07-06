@@ -1,12 +1,17 @@
 function ListGroup() {
+  const items = ["Warsaw", "Cracow", "Gdansk", "Wroclaw", "Poznan"];
+
   return (
-    <ul className="list-group">
-      <li className="list-group-item">An item</li>
-      <li className="list-group-item">A second item</li>
-      <li className="list-group-item">A third item</li>
-      <li className="list-group-item">A fourth item</li>
-      <li className="list-group-item">And a fifth one</li>
-    </ul>
+    <>
+      {/* React.createElement('h1') */}
+      <h1>List</h1>
+      <ul className="list-group">
+        {/* Convert all items (by mapping) to "li" elements */}
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </>
   );
 }
 
